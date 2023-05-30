@@ -1,9 +1,10 @@
-from performance import performance
+from euler.euler_problems import EulerProblems
+from performance.performance import Performance
 
 if __name__ == "__main__":
-    perf = performance.Performance()
+    perf = Performance()
+    problem = EulerProblems.find_or_throw('0001')()
     perf.start()
-    for i in range(1, 10^8):
-        pass
+    print(problem.solve())
     perf.end()
     pass

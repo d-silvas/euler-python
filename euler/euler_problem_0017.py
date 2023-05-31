@@ -11,7 +11,7 @@ class EulerProblem0017(EulerProblem):
     def _solve(self):
         count: int = 0
         for i in range(1, 1001):
-            count += len(re.sub(r"[ -]", "", num2words(i, lang="en")))
+            count += len(self.get_num_only_letters(i))
         return count
 
     def get_num_only_letters(self, number: int) -> str:
